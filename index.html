@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <input type="number" id="num1" >
+        <select name="operacion" id="operacion">
+            <option disabled selected>Seleccione operacion</option>
+            <option value="+">Sumar</option>
+            <option value="-">Restar</option>
+            <option value="*">Multiplicar</option>
+            <option value="/">Dividir</option>
+            <option value="%">Módulo</option>
+        </select>
+        <input type="number" id="num2">
+        <input type="number" id="resultado" disabled><br><br>
+        <input type="button" id="calcular" value="Calcular" onclick="calcular()">
+        <script>
+            function calcular(){
+                var resultado;
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+                var operacion = document.getElementById('operacion').value;
+                if (operacion == '+') {
+                   resultado = num1 + num2;
+                } else if (operacion == '-') {
+                    resultado =  num1 - num2;
+                } else if (operacion == '*') {
+                    resultado =  num1 * num2;
+                } else if (operacion == '/') {
+                    resultado =  num1 / num2;
+                } else if (operacion == '%') {
+                    resultado =  num1 % num2;
+                } 
+                document.getElementById('resultado').value = resultado;
+            }Ç
+        </script>
+    </body>
+</html>
